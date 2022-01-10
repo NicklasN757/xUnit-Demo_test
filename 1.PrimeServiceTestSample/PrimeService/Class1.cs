@@ -20,5 +20,29 @@ namespace PrimeService
             }
             return true;
         }
+
+        public bool IsBiggerThen10(int value)
+        {
+            if (value > 10)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool IsBiggerThen20(int value)
+        {
+            if (value > 20)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

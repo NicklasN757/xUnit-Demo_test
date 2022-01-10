@@ -45,5 +45,25 @@ namespace PrimeService.Tests
 
             Assert.False(result, $"{value} should not be prime");
         }
+
+        [Fact]
+        public void IsBiggerThen10() 
+        {
+            var result = _primeService.IsBiggerThen10(15);
+
+            Assert.True(result, $"Fail");
+        }
+
+        [Theory]
+        [InlineData(10)]
+        [InlineData(20)]
+        [InlineData(30)]
+        [InlineData(40)]
+        public void IsBiggerThen20(int value)
+        {
+            var result = _primeService.IsBiggerThen20(value);
+
+            Assert.True(result, $"Fail");
+        }
     }
 }
